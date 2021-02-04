@@ -29,11 +29,12 @@ public class Plus_twoNum {
 		}
 		
 		//set 을 Integer배열에 담기
-		Integer[] temp = new Integer[a.size()]; 	
-		a.toArray(temp);
+//		Integer[] temp = new Integer[a.size()]; 	
+//		a.toArray(temp);
 		//임시배열인 integer배열을 int 배열인 answer에 담기
-		answer = Arrays.stream(temp).mapToInt(i->i).toArray();
-		//   a.stream().sorted().mapToInt(i->i).toArray();
+//		answer = Arrays.stream(temp).mapToInt(i->i).toArray();
+		answer = a.stream().mapToInt(i->i).toArray();
+		//   a.stream().sorted().mapToInt().toArray();
 		// HashSet 대신 TreeSet으로 생성하면 중복제거 및 정렬됨
 		Arrays.sort(answer);
 		return answer;
